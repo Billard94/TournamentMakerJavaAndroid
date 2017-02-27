@@ -1,0 +1,100 @@
+<resources>
+    <string name="app_name">TournamentMaker</string>
+    <string name="title_activity_info_collection">InfoCollection</string>
+    <string name="round_robin_info">
+        <b>ROUND ROBIN FORMAT:</b>
+        \nEach team will play each other once and the winner of this tournament will be decided by which team has the most points, if there is a tie-breaker, goal differential is calculated and compared.
+        \nEx:
+        \nTeam A: 3-0 (6 points); goal differential: 3
+        \nTeam B: 2-1 (4 points); goal differential: 0
+        \nTeam C: 1-2 (2 points); goal differential: 1
+        \nTeam D: 0-3 (0 points); goal differential: -4
+        \nTeam E: 2-1 (4 points); goal differential: 2
+        \nTeam F: 1-2 (2 points); goal differential: 0
+        \nTeam G: 3-0 (6 points); goal differential: 1
+        \nTeam H: 0-3 (0 points); goal differential: -1
+        \nWinner: Team A with 6 points and a differential of 3
+    </string>
+
+    <string name="knockout_info">
+        <b>KNOCKOUT FORMAT:</b>
+        \nA team will randomly play another team in single elimination game. The winning team will move on while the losing team will be eliminated from the tournament. This will repeat until there is only one team, that team will be crowned champion.
+        \nEx:
+        \nRound 1:
+        \nTeam A vs Team B (Team B wins, Team A is eliminated)
+        \nTeam C vs Team D (Team C wins, Team D is eliminated)
+        \nTeam E vs Team F (Team E wins, Team F is eliminated)
+        \nTeam G vs Team H (Team H wins, Team G is eliminated)
+        \nRound 2:
+        \nTeam B vs Team C (Team B wins, Team C is eliminated)
+        \nTeam E vs Team H (Team E wins, Team H is eliminated)
+        \nRound 3:
+        \nTeam B vs Team E (Team B wins, Team E is eliminated)
+        \nChampion: Team B
+    </string>
+
+    <string name="rrko_info">
+        <b>ROUND-ROBIN KNOCKOUT:</b>
+        \nEach team will play each other once to then be placed in a ranking format. Once everyteam had played each other and their rank is decided, the knockout portion of the tournament will start. The format will be the highest ranked team playing the lowest rank team and so forth. The winner will be decided once only one team remains.
+        \nEx:
+        \nRRKO First RR:
+        \nGroup 1:
+        \nTeam A: 3-0 (6 points) goal differential : 5
+        \nTeam B: 1-2 (2 points) goal differential : -2
+        \nTeam C: 2-1 (4 points) goal differential : 1
+        \nTeam D: 0-3 (0 points) goal differential : -7
+        \nGroup 2:
+        \nTeam E: 2-1 (4 points) goal differential : 2
+        \nTeam F: 1-2 (2 points) goal differential : 0
+        \nTeam G: 3-0 (6 points) goal differential :  3
+        \nTeam H: 0-3 (0 points) goal differential : -4
+        \nRR OVER:
+        \nRanks
+        \n1. Team A (6 points, goal differential of 5)
+        \n2. Team G (6 points, goal differential of 3)
+        \n3. Team E (4 points, goal differential of 2)
+        \n4. Team C (4 points, goal differential of 1)
+        \n5. Team F (2 points, goal differential of 0)
+        \n6. Team B (2 points, goal differential of -2)
+        \n7. Team H (0 points, goal differential of -4)
+        \n8. Team D (0 points, goal differential of -7)
+        \nKO Begins:
+        \nRound 1:
+        \nTeam A(1) vs Team D(8) (Team D wins, huge upset, Team A is eliminated)
+        \nTeam G(2) vs Team H(7) (Team G wins, Team H is eliminated)
+        \nTeam E(3) vs Team B(6) (Team B wins, Team E is eliminated)
+        \nTeam C(4) vs Team F(5) (Team C wins, Team F is eliminated)
+        \nRank:
+        \n2 .Team G
+        \n4. Team C
+        \n6. Team B
+        \n8. Team D
+        \nRound 2 (semi-finals):
+        \nTeam G(2) vs Team D(8) (Team G wins, Team D is eliminated)
+        \nTeam C(4) vs Team B(6) (Team C wins, Team B is eliminated)
+        \nTeams Remaining for final:
+        \nTeam G vs Team C (Team G having the homefield advantage because they are higher ranked from the RR)
+        \nTeam G win is the champ
+    </string>
+
+    <string-array name="tournament_type">
+        <item>Knockout</item>
+        <item>Round Robin</item>
+        <item>Round Robin Knockout</item>
+    </string-array>
+
+    <string-array name="team_num">
+        <item>2</item>
+        <item>4</item>
+        <item>8</item>
+        <item>16</item>
+    </string-array>
+
+    <string-array name="game_length">
+        <item>90 mins</item>
+        <item>60 mins</item>
+        <item>30 mins</item>
+    </string-array>
+    <string name="title_activity_tournament_display">TournamentDisplayActivity</string>
+
+</resources>

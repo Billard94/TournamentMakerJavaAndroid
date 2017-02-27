@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:onClick="OnRankClick">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Tournament: "
+            android:id="@+id/tournamentName_schedule"
+            android:layout_marginBottom="5dp" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="2"
+            android:dividerPadding="0dp"
+            android:padding="0dp"
+            android:id="@+id/tabBar">
+
+            <TableRow android:padding="0dp"
+                android:id="@+id/tabBarRow">
+                <Button
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Schedule"
+                    android:id="@+id/schedule_button"
+                    android:layout_weight="1"
+                    android:layout_margin="0dp" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Results"
+                android:id="@+id/results_button"
+                android:layout_weight="1"
+                android:layout_margin="0dp"
+                android:onClick="OnResultClick" />
+
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rank"
+                android:id="@+id/rank_button"
+                android:layout_weight="1"
+                android:layout_margin="0dp"
+                android:onClick="OnSubmitClick" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="info"
+                android:id="@+id/info_button"
+                android:layout_weight="1"
+                android:layout_margin="0dp"
+                android:onClick="OnInfoClick" />
+            </TableRow>
+
+        </TableLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Play Next Game"
+            android:id="@+id/play_next_game"
+            android:layout_gravity="center_horizontal"
+            android:onClick="OnPlayGameButtonClick" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/game_list"
+            android:layout_gravity="center_horizontal" >
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/schedule_table"
+                    android:rowCount="30"
+                    android:columnCount="3"
+                    android:layout_marginBottom="5dp"
+                    android:baselineAligned="false"
+                    android:stretchColumns="*"
+                    android:showDividers="middle">
+
+                </TableLayout>
+            </LinearLayout>
+        </ScrollView>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

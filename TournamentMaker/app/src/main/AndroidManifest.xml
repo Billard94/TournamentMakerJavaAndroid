@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="seg2105.tournamentmaker" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+        <activity android:name=".MainActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".InfoCollectionActivity" >
+        </activity>
+        <activity android:name=".TeamAddingActivity" >
+        </activity>
+        <activity
+            android:name=".TournamentDisplayActivity"
+            android:label="@string/title_activity_tournament_display"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity android:name=".ResultActivity" >
+        </activity>
+        <activity android:name=".RankActivity" >
+        </activity>
+        <activity android:name=".TournamentInfoActivity" >
+        </activity>
+        <activity android:name=".TeamInfoCollecting" >
+        </activity>
+        <activity android:name=".PlayNextGameActivity" >
+        </activity>
+        <activity android:name=".FormatInformationActivity" >
+        </activity>
+    </application>
+
+</manifest>
